@@ -1,0 +1,168 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans:wght@700&family=Rubik&display=swap');
+
+
+html {
+	/* STEP 2: Set base font size */
+	font-size: 100%;
+	/* STEP 3: Set base line-height (leading) */
+	line-height: 1.3;
+	/* STEP 4: Set base font-family (font stack) */
+	font-family: Garamond, Georgia, "Times New Roman", serif;
+	background: #111;
+	/* STEP 10a: set the background image */
+	background-image: url("../images/how-much.jpg");
+	background-repeat: no-repeat;
+	/* Image credit: How much? by el patojo CC https://www.flickr.com/photos/elpatojo/250157893 */
+	/* STEP 10b: set the background attachment */
+	background-attachment: fixed;
+	/* STEP 10c: set the background image size to cover the viewport */
+	background-size: cover;
+	min-width: 300px;
+}
+/* --------------------------------------------------------------------- */
+
+/* Change the font-family of all the page headings to another font that is also suitable for
+the subject matter. Try a web-font service like Google Fonts, or pick a web-safer font. */
+/* Imported new font */
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Noto Sans', sans-serif;
+	
+}
+/* Choose some other font-family for the paragraph elements – one that is suitable for
+body copy (good readability) and that also includes some ligatures. */
+/* Imported another new font for paragraph as well */
+*p{
+	font-family: 'Fira Code', monospace;           /* Played with universal selector for paragraph to make it the same font. */
+}
+
+/* Change the measure (line length) and leading (line-height) of the paragraphs.
+ Adjust the margins and spacing around the page and between textual elements of the
+document in order to add a bit more white space. */
+
+/* changed the min width of html tag as same as the min width of body so that the background can go away when the width reaches 300px at the same time as the body */
+body{
+	min-width: 300px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 2em;
+	background: rgb(137, 135, 135);
+}
+p{
+	padding: 1em;
+	line-height: 1.8rem;
+}
+
+ /* There are several instances of duplicated font-family declarations – eliminate these
+duplications by using different types of CSS selectors (like grouped or sibling selectors). */
+    /* done in initial steps for header files */
+
+/* Try to get the page working without issues on a small screen width (in portrait
+orientation) – you will need to adjust some of the typographic settings for the page-level
+header in particular. */
+	/* Did by changing the height of every headings like,h1,h2,h3,h4,h5,h6 as well as the paragraphs*/
+	
+
+/* Upload your modified page to a server and provide a URL to this Lab, or provide a link
+to a hosted code repository. */ 
+	/* Uploaded to githbub and netlify */
+
+
+/* ------------------------------------------------------------------------------- */
+/* STEP 5: Set font sizes according to a typographic scale (h1-h6 and p) */
+h1 {
+	/* STEP 7a: Set primary heading font - use "Alfa Slab One" from Google Fonts - place the appropriate @import at the top of this CSS file, then set the font-family to the same, with a fallback to "Rockwell" - then set font-weight to normal (we don't need to bold these fonts) */
+	/* font-family: "Alfa Slab One"; */
+	font-weight: normal;
+	/* ...try editing the CSS in the browser dev tools to see the fallback if the Google Font fails to load */
+}
+ h1 em {
+	font-size: 3.5rem;
+ }
+ h1{
+	font-size: 2.1rem;
+ }
+h2 {
+	font-size: 3.6rem	
+}
+h3 {
+	font-size: 2.4rem;
+}
+h4 {
+	font-size: 2.1rem;
+}
+h5 {
+	font-size: 1.8rem;
+}
+h6 {
+	font-size: 1.6rem;
+}
+p {
+	font-size: 1.4rem;
+}
+
+
+
+/* STEP 7d: Set font for p in header to the same as the h2 and the h3 elements, using a descendant (contextual) selector */
+/* header p {
+	/* font-family: "Century Gothic", Futura, sans-serif;
+/* }
+/* STEP 9a: Reduce space between headings in page-level header H1 */
+header h1 {
+	margin: 0;
+}
+/* STEP 8: Bump down subhead font size at top of article */
+header h2 {
+	/* STEP 9b: Reduce space between headings in page-level header H2 */
+	margin-top: 0;
+}
+/* STEP 9c: Move h3 and p closer together in article sections */
+section h3 {
+	margin-bottom: 0.5rem;
+	/* STEP 13: Visual hierarchy needs improvement - reduce font size */
+	
+}
+section p {
+	margin-top: 0;
+	/* STEP 12a: Measure is 85+ - too long - bump up the font size */
+	font-size: 1.6rem;
+	/* STEP 12b: Play with the leading (line-height) - raise to 1.8, then reduce to 1.2 - discuss typographic color and vertical rhythm */
+	line-height: 1.8;
+	/* STEP 14a: Justification with text-align - left, right, center, justify */
+	text-align: left;
+	/* STEP 14b: Hyphenation - see Firefox implementation and change BODY width to 50% down below, then resize the window width in your browser to see the effect */
+	hyphens: auto;
+	/* STEP 16a: Play with some non-standard CSS properties like text-rendering - this can enable things like ligatures - look at the combination of letters f and i */
+	text-rendering: optimizeLegibility;
+	/* STEP 16b: Change the font to Calibri, then watch the 'fi' and 'fl' combination render as a ligature - for some reason, 'ff' does not for this font */
+	/* font-family: Calibri; */
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering */
+}
+
+
+header {
+	background: #5C8096;
+	/* STEP 11a: Add whitespace - very important */
+	padding: 50px;
+	/* STEP 15: Inset text effect with text shadow */
+	text-shadow: 0 1px 1px #A2C0CE
+}
+section {
+	/* STEP 11b: Add more whitespace */
+	padding: 0 50px;
+}
+footer {
+	background: #333;
+	color: #eee;
+	/* STEP 11c. Add even more whitespace */
+	padding: 50px;
+	margin-top: 50px;
+}
+footer h3 {
+	font-size: 1.4em;
+}
+/* footer p, footer small {
+	font-family: "Century Gothic", Futura, sans-serif;
+} */
+
